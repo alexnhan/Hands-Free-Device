@@ -1,0 +1,58 @@
+int hall1 = 2;
+int hall2 = 3;
+int hall3 = 4;
+int hall4 = 5;
+int hall5 = 6;
+int hall6 = 7;
+int hall7 = 8;
+int hall8 = 9;
+int hall9 = 10;
+
+void setup() {
+
+  Serial.begin(9600);
+
+  pinMode(hall1, INPUT);
+  pinMode(hall2, INPUT);
+  pinMode(hall3, INPUT);
+  pinMode(hall4, INPUT);
+  pinMode(hall5, INPUT);
+  pinMode(hall6, INPUT);
+  pinMode(hall7, INPUT);
+  pinMode(hall8, INPUT);
+  pinMode(hall9, INPUT);
+}
+
+
+void loop() {
+  // read the input pin:
+  int state1 = digitalRead(hall1);
+  int state2 = digitalRead(hall2);
+  int state3 = digitalRead(hall3);
+  int state4 = digitalRead(hall4);
+  int state5 = digitalRead(hall5);
+  int state6 = digitalRead(hall6);
+  int state7 = digitalRead(hall7);
+  int state8 = digitalRead(hall8);
+  int state9 = digitalRead(hall9);
+  // print out the state of the button:
+  Serial.print("1: ");
+  Serial.print(state1);
+  Serial.print("  2: ");
+  Serial.print(state2);
+  Serial.print("  3: ");
+  Serial.print(state3);
+  Serial.print("  4: ");
+  Serial.print(state4);  
+  Serial.print("  5: ");
+  Serial.print(state5);
+  Serial.print("  6: ");
+  Serial.print(state6);
+  Serial.print("  7: ");
+  Serial.print(state7);
+  Serial.print("  8: ");
+  Serial.print(state8);
+  Serial.print("  9: ");
+  Serial.println(state9);
+  delay(1);        // delay in between reads for stability
+}
